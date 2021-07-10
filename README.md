@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Using
+- Ruby 2.7.1
+- Rails 5.2.6
 
-Things you may want to cover:
+## Download and Installation
 
-* Ruby version
+```sh
+git clone https://github.com/paularesende/word_count_challenge.git word_counter
+```
 
-* System dependencies
+```sh
+cd word_counter
+```
 
-* Configuration
+```sh
+bundle install
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+rails s
+```
