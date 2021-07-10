@@ -1,5 +1,8 @@
 # README
 
+## Heroku Link
+- https://paula-wordcounter.herokuapp.com/
+
 ## Using
 - Ruby 2.7.1
 - Rails 5.2.6
