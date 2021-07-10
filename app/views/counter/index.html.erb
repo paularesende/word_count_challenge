@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word counter</title>
+</head>
+<body>
+
+<h1>This is your word counter</h1>
+
+
+
+<%= form_for(:text_body, as: "post", url: counter_set_words_quantity_path) do |f| %>
+  <%= f.text_field :text,  value: @text_body, placeholder: 'Enter your data', required: true %>
+  <%= f.submit "Count" %>
+<% end %>
+
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
+</body>
+</html>

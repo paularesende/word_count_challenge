@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "counter", to: "counter#index"
+  get "counter/set_words_quantity"
+  post "counter/set_words_quantity"
+
+  root to: "counter#index"
 end
