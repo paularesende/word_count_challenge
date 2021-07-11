@@ -2,17 +2,18 @@ class CounterController < ApplicationController
   before_action :set_text_body, only: %i[index]
 
   def index
-    set_words_quantity if params[:text_body].present?
-    flash[:notice] = set_message(params[:text_body_size].to_i) if params[:text_body_size].present?
+    if @text_body.present?
+      words_quantity = set_words_quantity
+      flash[:notice] = set_message(words_quantity)
+    end
   end
 
   def set_words_quantity
-    text_body_size = set_text_body(params[:text_body][:text]).split.size
-    redirect_to counter_path(words_counted: @text_body, text_body_size: text_body_size)
+    @text_body.split.size
   end
 
-  def set_text_body(words = '')
-    @text_body = params[:words_counted].present? ? params[:words_counted] : words
+  def set_text_body
+    @text_body = params[:text_body].present? ? params[:text_body][:text] : ''
   end
 
   def set_message(text_body_size = 0)
