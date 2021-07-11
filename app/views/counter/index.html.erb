@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
+  <header>WORD COUNTER</header>
+  <body>
+    <div id="form">
+      <%= form_for(:text_body, id: "form", class: "topBefore", as: "post", url: counter_set_words_quantity_path) do |f| %>
+        <%= f.text_area :text,
+                        value: @text_body,
+                        placeholder: 'PLACE YOUR TEXT HERE',
+                        title: "Please, type something",
+                        required: "required" %>
+        <%= f.submit class: "submit", type: "submit", id: "submit", value: "GO!" %>
+      <% end %>
+    </div>
 
-<header>WORD COUNTER</header>
-
-
-<div id="form">
-<%= form_for(:text_body, id: "form", class: "topBefore", as: "post", url: counter_set_words_quantity_path) do |f| %>
-  <%= f.text_area :text,
-                  value: @text_body,
-                  placeholder: 'PLACE YOUR TEXT HERE',
-                  title: "Please, type something",
-                  required: "required" %>
-    <%= f.submit class: "submit", type: "submit", id: "submit", value: "GO!" %>
-<% end %>
-</div>
-
-
-<% flash.each do |type, msg| %>
-  <div class="alert alert-info" id = "feedback">
-    <%= msg %>
-  </div>
-<% end %>
-</form>
-</body>
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-info" id="feedback">
+      <%= msg %>
+    </div>
+  <% end %>
+  </body>
 </html>

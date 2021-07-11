@@ -1,15 +1,18 @@
 class CounterController < ApplicationController
-  before_action :set_text_body, only: %i[set_words_quantity]
+  before_action :set_text_body, only: %i[index]
 
   def index
-    @text_body = params[:text_param] if params[:text_param].present?
-    set_words_quantity if params[:text]
+    set_words_quantity if params[:text_body].present?
   end
 
   def set_words_quantity
-    text_body_size = @text_body.split.size
+    text_body_size = set_text_body(params[:text_body][:text]).split.size
     flash[:notice] = set_message(text_body_size)
-    redirect_to counter_path(text_param: @text_body)
+    redirect_to counter_path(words_counted: @text_body)
+  end
+
+  def set_text_body(words = "")
+    @text_body = params[:words_counted].present? ? params[:words_counted] : words
   end
 
   def set_message(text_body_size)
@@ -17,12 +20,8 @@ class CounterController < ApplicationController
     text_body_size > 1 ? "You entered #{text_body_size} words" : "You entered only #{text_body_size} word"
   end
 
-  def set_text_body
-    @text_body = params[:text_body].present? ? params[:text_body][:text] : Counter.new
-  end
 
   #TODO
   # Tratar não palavras (simbolos especiais e numeros)
-  # Refatorar código
   # Apagar mensagem quando clica no botão
 end
