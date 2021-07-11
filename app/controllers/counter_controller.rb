@@ -22,7 +22,7 @@ class CounterController < ApplicationController
   end
 
   #TODO
-  # Front end
   # Tratar não palavras (simbolos especiais e numeros)
   # Refatorar código
+  # Apagar mensagem quando clica no botão
 end

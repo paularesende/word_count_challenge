@@ -18,7 +18,7 @@
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: #aca49c;
-    font-size: 0.875em;
+    font-size: 16px;
 }
 
 input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
@@ -27,7 +27,7 @@ input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholde
 
 input::-moz-placeholder, textarea::-moz-placeholder {
     color: #aca49c;
-    font-size: 0.875em;
+    font-size: 16px;
 }
 
 input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
@@ -36,7 +36,7 @@ input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
 
 input::placeholder, textarea::placeholder {
     color: #aca49c;
-    font-size: 0.875em;
+    font-size: 16px;
 }
 
 input:focus::placeholder, textarea::focus:placeholder {
@@ -45,7 +45,7 @@ input:focus::placeholder, textarea::focus:placeholder {
 
 input::-ms-placeholder, textarea::-ms-placeholder {
     color: #aca49c;
-    font-size: 0.875em;
+    font-size: 16px;
 }
 
 input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
@@ -56,7 +56,7 @@ input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
 
 input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
     color: #e2dedb;
-    font-size: 0.875em;
+    font-size: 16px;
 }
 
 input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
@@ -65,7 +65,7 @@ input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-inpu
 
 input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
     color: #e2dedb;
-    font-size: 0.875em;
+    font-size: 16px;
 }
 
 input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
@@ -74,7 +74,7 @@ input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
 
 input:hover::placeholder, textarea:hover::placeholder {
     color: #e2dedb;
-    font-size: 0.875em;
+    font-size: 16px;
 }
 
 input:hover:focus::placeholder, textarea:hover:focus::placeholder {
@@ -83,7 +83,7 @@ input:hover:focus::placeholder, textarea:hover:focus::placeholder {
 
 input:hover::placeholder, textarea:hover::placeholder {
     color: #e2dedb;
-    font-size: 0.875em;
+    font-size: 16px;
 }
 
 input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
@@ -98,7 +98,7 @@ body {
 
 header {
     position: relative;
-    margin: 100px 0 25px 0;
+    margin: 100px 0 16px 0;
     font-size: 2.3em;
     text-align: center;
     letter-spacing: 7px;
@@ -112,10 +112,10 @@ header {
 
 input {
     font-family: 'Lato', sans-serif;
-    font-size: 0.875em;
+    font-size: 16px;
     width: 470px;
     height: 50px;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 18px 0px 18px;
 
     background: transparent;
     outline: none;
@@ -136,18 +136,18 @@ input:hover {
 }
 
 textarea {
-    width: 470px;
-    max-width: 470px;
-    height: 110px;
-    max-height: 110px;
-    padding: 15px;
+    width: 450px;
+    max-width: 600px;
+    height: 450px;
+    max-height: 600px;
+    padding: 10px;
 
     background: transparent;
     outline: none;
 
     color: #726659;
     font-family: 'Lato', sans-serif;
-    font-size: 0.875em;
+    font-size: 16px;
 
     border: solid 1px #b3aca7;
 
@@ -163,13 +163,13 @@ textarea:hover {
 }
 
 #submit {
-    width: 502px;
+    width: 472px;
 
     padding: 0;
     margin: -5px 0px 0px 0px;
 
     font-family: 'Lato', sans-serif;
-    font-size: 0.875em;
+    font-size: 16px;
     color: #b3aca7;
 
     outline:none;
@@ -178,6 +178,18 @@ textarea:hover {
     border: solid 1px #b3aca7;
     border-top: none;
 }
+
+#feedback {
+    color: #323140;
+    margin: 0px auto 0px auto;
+    font-size: 2.3em;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: #dcff46;
+    display: table;
+}
+
 
 #submit:hover {
     color: #568d04;
